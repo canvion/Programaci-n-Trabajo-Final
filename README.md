@@ -80,31 +80,31 @@ The entity–relationship model defining the tables and relationships in MySQL.
 
 ---
 
-## Pictures
+Pictures
 
-### Home Page  
-![Pantalla de Inicio](docs/screenshots/inicio.png)
+Home Page
+![Pantalla de Inicio](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.45.54.png)
 
-### Login Page  
-![Formulario de Login](docs/screenshots/login.png)
+Login Page
+![Formulario de Login](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.45.58.png)
 
-### Insertar Deuda  
-![Formulario Insertar Deuda](docs/screenshots/insertar_deuda_form.png)  
-![Listado de Deudas y Justificantes](docs/screenshots/insertar_deuda_listado.png)
+Insertar Deuda – Formulario
+![Formulario Insertar Deuda](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.14.png)
 
-### Editar Deuda  
-![Formulario Editar Deuda](docs/screenshots/editar_deuda.png)
+Insertar Deuda – Listado de Deudas
+![Listado Deudas 1](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.19.png)
+![Listado Deudas 2](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.22.png)
 
-### Panel de Administración  
-![Vista de Administración (Sin ordenar)](docs/screenshots/admin_listado.png)  
-![Vista de Administración (Ordenar)](docs/screenshots/admin_ordenado.png)
+Justificantes Pendientes
+![Justificantes Pendientes](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.27.png)
 
----
+Editar Deuda
+![Editar Deuda](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.47.png)
 
-## Contributing
+Contributing
+
 Contributions are welcome! Please open issues or pull requests for improvements.
 
----
+License
 
-## License
-This project is licensed under the MIT License.  
+This project is licensed under the MIT License.
