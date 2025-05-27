@@ -78,6 +78,8 @@ The entity–relationship model defining the tables and relationships in MySQL.
 ├─ deuda.js
 └─ inicio.js
 
+---
+
 ## Pictures
 
 ### Home Page  
@@ -97,8 +99,12 @@ The entity–relationship model defining the tables and relationships in MySQL.
 ![Vista de Administración (Sin ordenar)](docs/screenshots/admin_listado.png)  
 ![Vista de Administración (Ordenar)](docs/screenshots/admin_ordenado.png)
 
+---
+
 ## Contributing
 Contributions are welcome! Please open issues or pull requests for improvements.
+
+---
 
 ## License
 This project is licensed under the MIT License.  
