@@ -53,62 +53,7 @@ The entity–relationship model defining the tables and relationships in MySQL.
 - **Database:** MySQL (phpMyAdmin)  
 - **Frontend:** HTML5, CSS3, Vanilla JavaScript  
 
----
-
-`## Project Structure
-```text
-/WebContent/
-├─ insertar_deuda.html
-├─ admin.html
-├─ login.html
-├─ justificante.html
-└─ revisar_justificacion.html
-/src/
-├─ servlets/
-│   ├─ InsertarDeudaServlet.java
-│   ├─ EditarDeudaServlet.java
-│   ├─ AdminServlet.java
-│   └─ JustificacionServlet.java
-└─ models/
-    └─ Deuda.java
-/config/
-└─ config.js
-/scripts/
-├─ auth.js
-├─ deuda.js
-└─ inicio.js
-
----
-
-Pictures
-
-Home Page
-![Pantalla de Inicio](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.45.54.png)
-
-Login Page
-![Formulario de Login](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.45.58.png)
-
-Insertar Deuda – Formulario
-![Formulario Insertar Deuda](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.14.png)
-
-Insertar Deuda – Listado de Deudas
-![Listado Deudas 1](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.19.png)
-![Listado Deudas 2](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.22.png)
-
-Justificantes Pendientes
-![Justificantes Pendientes](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.27.png)
-
-Editar Deuda
-![Editar Deuda](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.47.png)
-
-Contributing
-
-Contributions are welcome! Please open issues or pull requests for improvements.
-
-License
-
-This project is licensed under the MIT License.
-`## Project Structure
+## Project Structure
 
 ```text
 /WebContent/
@@ -129,39 +74,6 @@ This project is licensed under the MIT License.
 └─ config.js
 /scripts/
 ├─ auth.js
-├─ deuda.js
 └─ inicio.js
-```
 
 ---
-
-## Pictures
-
-### Home Page  
-![Pantalla de Inicio](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.45.54.png)
-
-### Login Page  
-![Formulario de Login](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.45.58.png)
-
-### Insertar Deuda – Formulario  
-![Formulario Insertar Deuda](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.14.png)
-
-### Insertar Deuda – Listado de Deudas  
-![Listado Deudas 1](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.19.png)  
-![Listado Deudas 2](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.22.png)
-
-### Justificantes Pendientes  
-![Justificantes Pendientes](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.27.png)
-
-### Editar Deuda  
-![Editar Deuda](docs/screenshots/Captura de pantalla 2025-05-27 a las 19.46.47.png)
-
----
-
-## Contributing
-Contributions are welcome! Please open issues or pull requests for improvements.
-
----
-
-## License
-This project is licensed under the MIT License.
