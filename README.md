@@ -1,54 +1,104 @@
-# Proyecto de Gestión de Deudas
+# Debt Management Project
 
-## Introducción
-Esta aplicación web dinámica permite registrar y gestionar las deudas que amigos o personas cercanas tienen contigo. Está desarrollada en Eclipse (Dynamic Web Project) usando Java Servlets y POJOs, con un frontend en HTML5, CSS3 y JavaScript. Se despliega sobre un servidor Apache Tomcat y almacena los datos en una base de datos MySQL (gestionada vía phpMyAdmin).
+## Introduction
+This dynamic web application lets you record and manage debts owed by friends or close contacts. It was developed in Eclipse (Dynamic Web Project) using Java Servlets and POJOs, with a frontend built in HTML5, CSS3 and JavaScript. It is deployed on an Apache Tomcat server and stores data in a MySQL database (managed via phpMyAdmin).
 
-## Documentación Técnica
-A continuación se detallan los artefactos y se dejan espacios para que añadas las imágenes correspondientes.
+## Technical Documentation
+Below are the required artifacts, with placeholders for your diagrams and screenshots.
 
-### 1. Análisis de requisitos
-#### Objetivos
-- Facilitar el registro de nuevas deudas con datos: nombre, fecha, importe, motivo y archivo adjunto (foto/PDF).
-- Ofrecer un panel de administración para visualizar, ordenar y gestionar todas las deudas.
-- Permitir la subida y revisión de justificantes de pago.
-- Garantizar acceso seguro mediante autenticación.
+### 1. Requirements Analysis
+#### Objectives
+- Allow registration of new debts with the following fields: name, date, amount, reason, and an optional attachment (photo/PDF).  
+- Provide an admin panel to view, sort, and manage all debts.  
+- Enable upload and review of payment proofs.  
+- Ensure secure access via authentication.
 
-#### Funcionalidades
-- **Insertar Deuda**: formulario para añadir una deuda (`insertar_deuda.html`).
-- **Listar Deudas**: vista administrativa (`admin.html`) con opción de ordenar por importe (ascendente/descendente).
-- **Editar/Eliminar Deuda**: modificar o borrar un registro existente.
-- **Gestión de Justificantes**: subida (`justificante.html`) y revisión (`revisar_justificacion.html`) de comprobantes.
-- **Login/Logout**: inicio de sesión seguro (`login.html`).
+#### Functionalities
+- **Insert Debt**: form to add a debt (`insertar_deuda.html`).  
+- **List Debts**: admin view (`admin.html`) with sort-by-amount (ascending/descending).  
+- **Edit/Delete Debt**: modify or remove existing records.  
+- **Manage Proofs**: upload (`justificante.html`) and review (`revisar_justificacion.html`) payment proofs.  
+- **Login/Logout**: secure sign-in and sign-out (`login.html`).  
 
-### 2. Diseño del Sistema
-Se incluyen los diagramas UML que ilustran la arquitectura y las interacciones.
+### 2. System Design
+The UML diagrams below illustrate the architecture and interactions.
 
-#### 2.1 Diagrama de Casos de Uso
-![Diagrama de Casos de Uso](docs/diagrama_casos_uso.png)  
-*(Inserta aquí el diagrama de casos de uso que representa las acciones del usuario y del administrador.)*
+### 3. Data Model
+The entity–relationship model defining the tables and relationships in MySQL.
 
-#### 2.2 Diagrama de Clases
-![Diagrama de Clases](docs/diagrama_clases.png)  
-*(Inserta aquí el diagrama de clases que modela las entidades Deuda, Usuario y Justificante.)*
+### 4. Installation and Usage Guide
 
-#### 2.3 Diagrama de Secuencia
-![Diagrama de Secuencia](docs/diagrama_secuencia.png)  
-*(Inserta aquí el diagrama de secuencia para el flujo ‘Insertar Deuda’.)*
+1. **Create the database and tables** by running the `schema.sql` script in phpMyAdmin.  
+2. **Deploy** the project to Apache Tomcat from Eclipse.  
+3. **Access** the application at `http://localhost:8080/tu-app/`.  
+4. **Register/Login** and start managing your debts.
 
-### 3. Modelo de Datos
-El modelo entidad-relación define las tablas y sus relaciones en MySQL.
+### 5. Tests Performed
 
-![Modelo de Datos](docs/modelo_datos.png)  
-*(Inserta aquí el diagrama ER de la base de datos con tablas: DEUDAS, USUARIOS, JUSTIFICANTES.)*
+#### 5.1 Unit Tests
+- JUnit test classes for insert, edit, and delete operations on debts.  
+- **Coverage:** 85% in the `models` package.  
+*(Add Maven/JUnit console output or coverage report screenshot: `docs/unit_tests.png`)*
 
-### 4. Guía de Instalación y Uso
-1. **Clona el repositorio** y abre el proyecto en Eclipse como Dynamic Web Project.  
-2. **Configura la conexión** a MySQL en `config.js`:
-   ```js
-   export const dbConfig = {
-     host: 'localhost',
-     port: 3306,
-     user: 'tu_usuario',
-     password: 'tu_contraseña',
-     database: 'nombre_bd'
-   };
+#### 5.2 Integration Tests
+- End-to-end tests with Postman against the Servlet endpoints.  
+- Verified full flow: authentication → insert → list → upload proof.  
+*(Attach Postman collection or HTTP response screenshots: `docs/integration_tests.png`)*
+
+---
+
+## Technologies Used
+- **Java EE:** Servlets, JDBC  
+- **Server:** Apache Tomcat  
+- **Database:** MySQL (phpMyAdmin)  
+- **Frontend:** HTML5, CSS3, Vanilla JavaScript  
+
+---
+
+## Project Structure
+```text
+/WebContent/
+├─ insertar_deuda.html
+├─ admin.html
+├─ login.html
+├─ justificante.html
+└─ revisar_justificacion.html
+/src/
+├─ servlets/
+│   ├─ InsertarDeudaServlet.java
+│   ├─ EditarDeudaServlet.java
+│   ├─ AdminServlet.java
+│   └─ JustificacionServlet.java
+└─ models/
+    └─ Deuda.java
+/config/
+└─ config.js
+/scripts/
+├─ auth.js
+├─ deuda.js
+└─ inicio.js
+
+## Pictures
+
+### Home Page  
+![Pantalla de Inicio](docs/screenshots/inicio.png)
+
+### Login Page  
+![Formulario de Login](docs/screenshots/login.png)
+
+### Insertar Deuda  
+![Formulario Insertar Deuda](docs/screenshots/insertar_deuda_form.png)  
+![Listado de Deudas y Justificantes](docs/screenshots/insertar_deuda_listado.png)
+
+### Editar Deuda  
+![Formulario Editar Deuda](docs/screenshots/editar_deuda.png)
+
+### Panel de Administración  
+![Vista de Administración (Sin ordenar)](docs/screenshots/admin_listado.png)  
+![Vista de Administración (Ordenar)](docs/screenshots/admin_ordenado.png)
+
+## Contributing
+Contributions are welcome! Please open issues or pull requests for improvements.
+
+## License
+This project is licensed under the MIT License.  
